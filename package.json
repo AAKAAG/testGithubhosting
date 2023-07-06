@@ -1,0 +1,42 @@
+{
+  "name": "horizontal-tiles",
+  "version": "1.0.0",
+  "description": "Horizontal scrollcontrols with expanding tiles.",
+  "keywords": [
+    "expand",
+    "scrollcontrols",
+    "tiles",
+    "horizontal"
+  ],
+  "main": "src/index.js",
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^0.10.2-rc2",
+    "@pmndrs/branding": "0.0.8",
+    "@react-three/drei": "^9.74.15",
+    "@react-three/fiber": "^8.13.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.14.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "5.3.9",
+    "three": "0.150.1",
+    "uuid-by-string": "^4.0.0",
+    "valtio": "1.10.3",
+    "wouter": "^2.11.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}

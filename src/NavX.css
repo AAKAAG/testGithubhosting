@@ -1,0 +1,437 @@
+@font-face {
+  font-family: "Title_Brand";
+  src: url(../Font/gears-of-peace/GearsOfPeace.ttf)format('opentype');
+}
+@font-face {
+  font-family: "Title_Font";
+  src: url(../Font/gears-of-peace/GearsOfPeace.ttf)format('opentype');
+}
+@font-face {
+  font-family: "Text_Font";
+  src: url(../Font/Orkney/orkney-regular.otf)format('opentype');
+}
+
+
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: 'Kanit', sans-serif;
+  --font-secondary: "Text_Font";
+}
+
+/* Colors */
+/*:root {
+  --color-default: #80A4ED;
+  --color-primary: #1CFEBA;
+  --color-secondary: #BCD3F2;
+  --color-background: #FFF275;
+  --color-overlay:black;
+ 
+}*/
+:root {
+  --color-title: #edf3fe;
+  --color-default:  #edf3fe;
+  --color-secondary: #060d2f;
+  --color-primary: #060d2f;
+
+  --color-background:#daeefe;
+    --color-overlay:    linear-gradient(to bottom, #546ccf, #5f7bd9, #6a89e2, #7798eb, #84a7f3, #84a7f3, #84a7f3, #84a7f3, #7798eb, #6a89e2, #5f7bd9, #546ccf);
+  
+  
+  }
+/* Smooth scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  overscroll-behavior: none;
+  background: var(--color-background);
+  font-family: var(--font-primary);
+  
+}
+.navbar-brand, h1, h2{
+  font-size: calc(1rem + 1.5vw) !important; /* Adjusting the font size of the brand */
+  font-family: "Title_Brand"; 
+  color:  var(--color-title) !important;
+  
+}
+/* buttons */
+
+.primary-btn {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 16px 50px;
+	color: #ffffff;
+	position: relative;
+}
+
+.primary-btn.normal-btn {
+	color: #111111;
+}
+
+.primary-btn.normal-btn:before {
+	border-color: #c4c4c4;
+}
+
+.primary-btn.normal-btn:after {
+	border-color: #c4c4c4;
+}
+
+.primary-btn:before {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 28px;
+	width: 28px;
+	border-left: 2px solid var(--color-primary);
+	border-bottom: 2px solid var(--color-primary);
+	content: "";
+	border-radius: 0 0 0 4px;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.primary-btn:after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 28px;
+	width: 28px;
+	border-right: 2px solid var(--color-primary);
+	border-top: 2px solid var(--color-primary);
+	content: "";
+	border-radius: 0 4px 0 0;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.primary-btn:hover:before {
+	height: 100%;
+	width: 100%;
+	border-radius: 4px;
+}
+
+.primary-btn:hover:after {
+	height: 100%;
+	width: 100%;
+	border-radius: 4px;
+}
+
+.site-btn {
+	font-size: 16px;
+	color: #ffffff;
+	background: #dfa667;
+	font-weight: 600;
+	border: none;
+	display: inline-block;
+	padding: 14px 36px;
+}
+
+
+/*--------------------------------------------------------------
+# Desktop Navigation
+--------------------------------------------------------------*/
+
+/*Use to highlight the icons when moue hover the element */
+.website{
+  text-decoration: none;
+  fill: var(--color-default);
+}
+.website:hover{
+
+  fill: var(--color-secondary);
+
+  text-decoration: none;
+  
+}
+
+/* use to highlight the button of offcanvas when mouse hove the element*/
+.custom-navbar-toggler.navbar-toggler {
+  fill: var(--color-default);
+  z-index: 3;
+  transition: 0.3s;
+}
+
+
+.custom-navbar-toggler.navbar-toggler:hover {
+  
+  fill:var(--color-secondary);
+}
+
+
+/* Use to highlight the items navbar when the mouse hver the element*/
+.navbar-nav .nav-link{
+  color:  var(--color-default) !important;
+
+}
+.navbar-nav .nav-link:hover {
+  
+  color: var(--color-secondary)!important;
+}
+
+.dropdown>.dropdown-menu {
+  display: none;
+  border-color: var(--color-primary);
+  z-index:20 ;
+}
+/* Use to automatically open the dropdown menu*/
+.dropdown:hover>.dropdown-menu {
+  display: block;
+  
+}
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+
+
+
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+/* CSS Multi-line Comments - Custom CSS for the navigation menu */
+
+.navbar {
+ font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 1rem;
+  z-index: 10;
+}
+
+
+
+.navbar-nav .nav-item {
+  padding: 0.9rem 0.5rem !important; /* Adding padding to the navigation links */
+  
+  }
+
+ /*Change color and highlight the home item of the navbar */
+.navbar-nav .nav-link.active {
+  color: var(--color-primary) !important; /* Adding padding to the navigation links */
+  font-weight:bolder !important;
+}
+
+/* for sure something is done but I dont know what*/
+.navbar-nav .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+  /* Custom SVG chevron for the dropdown toggle */
+}
+
+
+/* Custom styles for the expanding underline effect */
+
+.navbar-nav .nav-link {
+  position: relative; /* Establishing a positioning context for the pseudo-element */
+  font-weight: bold; /* Making the text bold */
+}
+
+.navbar-nav .nav-link::after {
+  content: ""; /* Creating a pseudo-element for the underline */
+  position: absolute; /* Absolutely positioning the underline */
+  bottom: 0; /* Positioning the underline at the bottom of the link */
+  left: 0; /* Positioning the underline starting from the left */
+  width: 100%; /* Making the underline span the full width of the link */
+  height: 2px; /* Setting the thickness of the underline */
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary), var(--color-primary))!important; /* Applying a gradient background to the underline */
+  transform: scaleX(0); /* Initially hiding the underline with no width */
+  transform-origin: left; /* Setting the transform origin to the left */
+  transition: transform 0.3s ease; /* Adding a transition for smooth animation */
+}
+
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1); /* Expanding the underline to full width on hover */
+}
+
+
+
+
+
+/*---------------------
+  Hero
+-----------------------*/
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#carouselExampleCaptions{
+  margin-bottom: -4rem;
+}
+.hero {
+  overflow-x: hidden;
+  padding: 0;
+  
+  
+}
+
+.hero .carousel {
+  width: 100%;
+  min-height: 50vh;
+  padding: 0px 0;
+  margin: 0;
+  position: relative;
+  
+}
+
+
+
+
+.hero .info {
+  position: absolute;
+  height: 50vh;
+  padding-top: 1rem;
+  inset: 0;
+  z-index: 2;
+  padding-top: 3rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero .info {
+    padding: 0 50px;
+  }
+}
+
+.hero .info h2 {
+  color: var(--color-default);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  font-size: 56px;
+  font-weight: 700;
+  position: relative;
+}
+
+.hero .info h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+
+.hero .info p {
+  color: var(--color-secondary);
+  font-size: 18px;
+}
+
+.hero .info .btn-get-started {
+  font-family: var(--font-primary);
+  color: var(--color-title);
+  display: inline-block;
+  text-decoration: none;
+
+  transition: 0.5s;
+  margin: 0px;
+ 
+}
+
+.hero .info .btn-get-started:hover {
+  background: var(--color-primary);
+}
+
+.hero .carousel-control-prev {
+  justify-content: start;
+ 
+}
+
+@media (min-width: 640px) {
+  .hero .carousel-control-prev {
+    padding-left: 15px;
+  }
+}
+
+.hero .carousel-control-next {
+  justify-content: end;
+}
+
+@media (min-width: 640px) {
+  .hero .carousel-control-next {
+    padding-right: 15px;
+  }
+}
+
+
+#introCarousel,
+          .carousel-inner,
+          .carousel-item,
+          .carousel-item.active {
+            height: 25vh;
+          }
+
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+  z-index: 3;
+  transition: 0.3s;
+  height: 50vh;
+  fill:var(--color-default);
+ position: fixed;
+}
+
+.hero .carousel-control-prev:focus,
+.hero .carousel-control-next:focus {
+ /* opacity: 0.5;*/
+ fill:var(--color-default);
+  
+}
+
+.hero .carousel-control-prev:hover,
+.hero .carousel-control-next:hover {
+  /*opacity: 1;*/
+  
+  fill:var(--color-secondary);
+}
+
+.carousel-indicators {
+  
+  
+  position:fixed !important;
+  height: 40vh;
+   
+}
+.carousel-indicators>button {
+  
+  margin-top: -6rem;
+  background-color:var(--color-default)!important;
+
+  
+  
+}
+.carousel-overlay {
+  height:100vh;
+  width:100vw;
+  top:0;
+  left:0;  
+  background-image: var(--color-overlay);
+   opacity: 0.7;
+  background-size:cover;
+  position:absolute;
+  z-index:1;
+}
+
+
+
+.carousel-indicators:hover{
+  background-color: var(--color-default),  !important;
+  opacity: 1;
+}
+.carousel-indicators .active{
+  background-color: var(--color-primary)!important;
+}
